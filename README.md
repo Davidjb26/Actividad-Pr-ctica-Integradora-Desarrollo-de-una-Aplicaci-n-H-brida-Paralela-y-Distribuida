@@ -1,10 +1,10 @@
-# Practica MPI + OpenMP: Multiplicacion de matrices
+# Práctica MPI + OpenMP: Multiplicación de matrices
 
-Aplicacion hibrida en C que multiplica dos matrices cuadradas grandes usando:
+Aplicación híbrida en C que multiplica dos matrices cuadradas grandes usando:
 
 - MPI para distribuir bloques de filas entre procesos.
-- OpenMP para paralelizar el calculo dentro de cada proceso.
-- `MPI_Scatterv` y `MPI_Gatherv` para soportar tamanos de matriz que no sean divisibles exactamente entre procesos.
+- OpenMP para paralelizar el cálculo dentro de cada proceso.
+- `MPI_Scatterv` y `MPI_Gatherv` para soportar tamaños de matriz que no sean divisibles exactamente entre procesos.
 
 ## Estructura
 
@@ -23,9 +23,9 @@ Practica_MPI_OpenMP/
 
 ## Requisitos
 
-- Implementacion MPI, por ejemplo OpenMPI, MPICH o Microsoft MPI.
+- Implementación MPI, por ejemplo OpenMPI, MPICH o Microsoft MPI.
 - Compilador C compatible con OpenMP.
-- `make` para usar el Makefile, aunque tambien se puede compilar con el comando `mpicc` indicado abajo.
+- `make` para usar el Makefile, aunque también se puede compilar con el comando `mpicc` indicado abajo.
 
 ## Compilacion
 
@@ -55,14 +55,14 @@ export OMP_NUM_THREADS=4
 mpirun -np 4 ./matrix_hybrid 1024 20.75
 ```
 
-Con validacion para tamanos pequenos:
+Con validación para tamaños pequeños:
 
 ```bash
 export OMP_NUM_THREADS=2
 mpirun -np 2 ./matrix_hybrid 64 0 --validate
 ```
 
-## Recomendacion de pruebas
+## Recomendación de pruebas
 
 Ejecutar varias combinaciones de procesos e hilos, por ejemplo:
 
